@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+  <h1>TicTacToe</h1>
+  <h2>Tocca a  {{this.$store.state.turno}}</h2>
+ 
+
+ <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
+ <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
+ <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
+
+ <button class="reset" onclick="window.location.reload()">Reset</button>
+
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ToeBox from './components/ToeBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+       ToeBox
   }
-}
+};
+
 </script>
 
 <style>
@@ -22,5 +34,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.reset{
+  font-size: x-large;
+  margin-top: 2%;
 }
 </style>
