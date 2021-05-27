@@ -1,29 +1,31 @@
 <template>
+  <!-- <h1>TicTacToe!</h1> -->
+
+  <h1>TOE OF TOE!</h1>
+  <h2>Tocca a {{ this.$store.state.turno }}</h2>
+  <div class="container"><button class="reset" onclick="window.location.reload()">Reset</button>  </div>
   
-  <h1>TicTacToe</h1>
-  <h2>Tocca a  {{this.$store.state.turno}}</h2>
- 
+  
 
- <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
- <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
- <div class="container"><ToeBox/><ToeBox/><ToeBox/></div>
+  <div class="container"><ToeBox /><ToeBox /><ToeBox /></div>
+  <div class="container"><ToeBox /><ToeBox /><ToeBox /></div>
+  <div class="container"><ToeBox /><ToeBox /><ToeBox /></div>
 
- <button class="reset" onclick="window.location.reload()">Reset</button>
+  <img class="piede" src="./assets/piede.png" alt="Piedi e dita" width="100" />
+  
 
- 
+  
 </template>
 
 <script>
-
-import ToeBox from './components/ToeBox.vue'
+import ToeBox from "./components/ToeBox.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-       ToeBox
-  }
+    ToeBox,
+  },
 };
-
 </script>
 
 <style>
@@ -40,8 +42,13 @@ export default {
   align-content: center;
   justify-content: center;
 }
-.reset{
+.reset {
   font-size: x-large;
-  margin-top: 2%;
+  margin-bottom: 1%;
+
+}
+
+.piede{
+  margin-top:1%;
 }
 </style>
